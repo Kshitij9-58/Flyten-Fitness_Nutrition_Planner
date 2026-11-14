@@ -206,4 +206,6 @@ Stated plainly rather than hidden, because they are the next pieces of work:
 
 ## License
 
-MIT
+Source-available, not open source. Read it, run it, evaluate it. Reuse in a
+product, redistribution, or derivative works need written permission. See
+[LICENSE](LICENSE).
