@@ -23,7 +23,7 @@ Time: about 20 minutes for email and Google. Apple is longer and costs money.
 Install the two new packages:
 
 ```powershell
-cd C:\Users\imksh\OptiFit_Project\frontend
+cd C:\Users\imksh\Flyten_Project\frontend
 npm install @supabase/supabase-js
 
 cd ..\backend

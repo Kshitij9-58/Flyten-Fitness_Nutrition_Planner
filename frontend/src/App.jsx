@@ -264,7 +264,7 @@ function ProjectionChart({ startKg, tdee, target, units }) {
  * for anonymous plans, where there is nowhere else to put it.
  */
 function useWeekProgress(profileId, serverDays, signedIn, apiFetch) {
-  const storageKey = `optifit:week:${profileId ?? 'local'}`;
+  const storageKey = `flyten:week:${profileId ?? 'local'}`;
   const [done, setDone] = useState({});
 
   useEffect(() => {

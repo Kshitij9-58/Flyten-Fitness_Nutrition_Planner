@@ -20,3 +20,5 @@ backend/app/fitness_dataset.csv
 backend/app/__pycache__/
 __pycache__/
 *.pyc
+backend/app/venv/
+node_modules/
