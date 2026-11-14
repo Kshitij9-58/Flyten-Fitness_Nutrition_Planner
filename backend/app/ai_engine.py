@@ -1,5 +1,5 @@
 """
-OptiFit plan generation.
+Flyten plan generation.
 
 What is actually personalised here is the calculated half: BMR, TDEE, calorie
 target and macro split all respond to the user's own numbers and goal. The CSV

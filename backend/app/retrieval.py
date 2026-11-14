@@ -1,5 +1,5 @@
 """
-OptiFit retrieval layer.
+Flyten retrieval layer.
 
 Kept deliberately separate from generation so that retrieval quality can be
 measured on its own (see eval_retrieval.py). When a RAG system gives a bad
@@ -37,19 +37,19 @@ from typing import Iterable, Sequence
 # --------------------------------------------------------------------------
 
 HERE = Path(__file__).resolve().parent
-DATASET_PATH = Path(os.getenv("OPTIFIT_DATASET", HERE / "fitness_dataset.csv"))
-EMBED_CACHE_PATH = Path(os.getenv("OPTIFIT_EMBED_CACHE", HERE / ".embed_cache.json"))
+DATASET_PATH = Path(os.getenv("FLYTEN_DATASET", HERE / "fitness_dataset.csv"))
+EMBED_CACHE_PATH = Path(os.getenv("FLYTEN_EMBED_CACHE", HERE / ".embed_cache.json"))
 
-EMBED_MODEL = os.getenv("OPTIFIT_EMBED_MODEL", "nomic-embed-text")
-LLM_MODEL = os.getenv("OPTIFIT_LLM_MODEL", "llama3")
+EMBED_MODEL = os.getenv("FLYTEN_EMBED_MODEL", "nomic-embed-text")
+LLM_MODEL = os.getenv("FLYTEN_LLM_MODEL", "llama3")
 
-DEFAULT_TOP_K = int(os.getenv("OPTIFIT_TOP_K", "4"))
-CANDIDATE_POOL = int(os.getenv("OPTIFIT_CANDIDATE_POOL", "12"))
+DEFAULT_TOP_K = int(os.getenv("FLYTEN_TOP_K", "4"))
+CANDIDATE_POOL = int(os.getenv("FLYTEN_CANDIDATE_POOL", "12"))
 RRF_K = 60  # standard RRF damping constant
 
 # Abstain thresholds. Tune these against the eval set, not by vibes.
-MIN_COSINE = float(os.getenv("OPTIFIT_MIN_COSINE", "0.45"))
-MIN_LEXICAL_OVERLAP = int(os.getenv("OPTIFIT_MIN_LEXICAL_OVERLAP", "1"))
+MIN_COSINE = float(os.getenv("FLYTEN_MIN_COSINE", "0.45"))
+MIN_LEXICAL_OVERLAP = int(os.getenv("FLYTEN_MIN_LEXICAL_OVERLAP", "1"))
 
 STOPWORDS = {
     "a", "about", "am", "an", "and", "any", "are", "as", "at", "be", "best",
@@ -313,7 +313,7 @@ class Retriever:
         self.bm25 = BM25([d.tokens for d in self.docs]) if use_lexical else None
         self.dense = DenseIndex(self.docs) if use_dense else None
         if use_rerank is None:
-            use_rerank = os.getenv("OPTIFIT_USE_RERANK", "0") == "1"
+            use_rerank = os.getenv("FLYTEN_USE_RERANK", "0") == "1"
         self.use_rerank = use_rerank
         self._llm = None
 
@@ -415,6 +415,6 @@ def get_retriever() -> Retriever:
     global _retriever
     if _retriever is None:
         _retriever = Retriever()
-        print(f"OptiFit retriever ready: {len(_retriever.docs)} docs, "
+        print(f"Flyten retriever ready: {len(_retriever.docs)} docs, "
               f"mode={_retriever.mode}")
     return _retriever

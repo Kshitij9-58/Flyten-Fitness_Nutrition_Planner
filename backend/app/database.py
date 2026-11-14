@@ -11,7 +11,7 @@ import os
 from sqlalchemy import create_engine
 from sqlalchemy.orm import declarative_base, sessionmaker
 
-_DEFAULT_URL = "sqlite:///./optifit.db"
+_DEFAULT_URL = "sqlite:///./flyten.db"
 
 
 def _normalise(url: str) -> str:

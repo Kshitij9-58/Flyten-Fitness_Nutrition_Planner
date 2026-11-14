@@ -36,7 +36,7 @@ Your local SQLite file does not have the new columns, so delete it once. This
 loses local test plans only:
 
 ```powershell
-Remove-Item .\optifit.db -ErrorAction SilentlyContinue
+Remove-Item .\flyten.db -ErrorAction SilentlyContinue
 ```
 
 ---
@@ -136,9 +136,9 @@ show an error if tapped, or you can delete it from `AuthPage.jsx`.
 At developer.apple.com, under **Certificates, Identifiers & Profiles**:
 
 1. **Identifiers → +** → **App IDs** → **App**. Give it a bundle id such as
-   `com.yourname.optifit`. Enable **Sign In with Apple**.
+   `com.yourname.flyten`. Enable **Sign In with Apple**.
 2. **Identifiers → +** → **Services IDs**. Identifier such as
-   `com.yourname.optifit.web`. This is your **Client ID** for the web.
+   `com.yourname.flyten.web`. This is your **Client ID** for the web.
 3. Edit that Services ID, enable **Sign In with Apple**, **Configure**:
    - Primary App ID: the App ID from step 1
    - Domains: `yourproject.supabase.co`
@@ -161,9 +161,9 @@ Enable it.
 
 In Supabase, **Authentication → URL Configuration**:
 
-- **Site URL**: your production URL, e.g. `https://optifit.vercel.app`
+- **Site URL**: your production URL, e.g. `https://flyten.vercel.app`
 - **Redirect URLs**: add `http://localhost:5173/**` and
-  `https://optifit.vercel.app/**`
+  `https://flyten.vercel.app/**`
 
 Without these, OAuth will complete and then bounce the user somewhere wrong.
 
@@ -176,8 +176,8 @@ Without these, OAuth will complete and then bounce the user somewhere wrong.
 ```
 SUPABASE_URL            = https://yourproject.supabase.co
 SUPABASE_JWT_SECRET     = your-jwt-secret
-OPTIFIT_ALLOWED_ORIGINS = https://optifit.vercel.app
-OPTIFIT_COACH_PROVIDER  = none
+FLYTEN_ALLOWED_ORIGINS = https://flyten.vercel.app
+FLYTEN_COACH_PROVIDER  = none
 ```
 
 **Vercel** → Settings → Environment Variables:
@@ -204,7 +204,7 @@ to it is a connection-string change:
 
 ```python
 # backend/app/database.py
-SQLALCHEMY_DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./optifit.db")
+SQLALCHEMY_DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./flyten.db")
 engine = create_engine(
     SQLALCHEMY_DATABASE_URL,
     connect_args={"check_same_thread": False} if SQLALCHEMY_DATABASE_URL.startswith("sqlite") else {},

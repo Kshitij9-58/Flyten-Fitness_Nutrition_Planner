@@ -62,7 +62,7 @@ llm = ChatOllama(model="llama3")
 
 # The RAG Prompt: Forcing the AI to use ONLY your database context
 system_prompt = f"""
-You are the OptiFit AI Coach. Answer the user's question using ONLY the provided data context. 
+You are the Flyten AI Coach. Answer the user's question using ONLY the provided data context. 
 Make the response sound natural, motivating, and directly address the user.
 
 User Question: {query}

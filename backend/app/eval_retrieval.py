@@ -1,5 +1,5 @@
 """
-Retrieval evaluation for OptiFit.
+Retrieval evaluation for Flyten.
 
 Measures retrieval in isolation, with no LLM in the loop for the core metrics.
 When a RAG system gives a bad answer, retrieval is usually the cause, and no

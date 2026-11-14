@@ -1,5 +1,5 @@
 """
-OptiFit AI Coach.
+Flyten AI Coach.
 
 Grounded in the user's own generated plan rather than a retrieved corpus. The
 plan is small, structured, and already the thing the user is asking about, so
@@ -13,8 +13,8 @@ retrieval stack in retrieval.py is kept for the day there is a real corpus of
 guidance passages to retrieve over.
 
 Provider is switchable so the API does not depend on a local Ollama daemon:
-    OPTIFIT_COACH_PROVIDER=ollama   (default, local dev)
-    OPTIFIT_COACH_PROVIDER=none     (coach disabled, rest of API unaffected)
+    FLYTEN_COACH_PROVIDER=ollama   (default, local dev)
+    FLYTEN_COACH_PROVIDER=none     (coach disabled, rest of API unaffected)
 """
 
 from __future__ import annotations
@@ -22,8 +22,8 @@ from __future__ import annotations
 import json
 import os
 
-PROVIDER = os.getenv("OPTIFIT_COACH_PROVIDER", "ollama").lower()
-LLM_MODEL = os.getenv("OPTIFIT_LLM_MODEL", "llama3")
+PROVIDER = os.getenv("FLYTEN_COACH_PROVIDER", "ollama").lower()
+LLM_MODEL = os.getenv("FLYTEN_LLM_MODEL", "llama3")
 
 DISABLED_MESSAGE = (
     "The AI coach isn't available in this environment. Your plan, metrics, and "
@@ -34,7 +34,7 @@ UNAVAILABLE_MESSAGE = (
     "unaffected, so nothing is lost."
 )
 
-SYSTEM_PROMPT = """You are the OptiFit AI Coach, speaking to one user about the \
+SYSTEM_PROMPT = """You are the Flyten AI Coach, speaking to one user about the \
 plan that was generated for them.
 
 Rules:

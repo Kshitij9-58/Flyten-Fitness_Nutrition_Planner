@@ -9,14 +9,14 @@ from . import ai_engine, auth, coach, database, models, schemas
 
 models.Base.metadata.create_all(bind=database.engine)
 
-app = FastAPI(title="OptiFit API")
+app = FastAPI(title="Flyten API")
 
 # allow_origins=["*"] with allow_credentials=True is invalid per the CORS spec:
 # browsers reject credentialed requests against a wildcard origin. Auth tokens
 # travel in the Authorization header rather than cookies, so credentials stay
 # off and origins are listed explicitly.
 _origins = os.getenv(
-    "OPTIFIT_ALLOWED_ORIGINS",
+    "FLYTEN_ALLOWED_ORIGINS",
     "http://localhost:3000,http://localhost:5173",
 ).split(",")
 

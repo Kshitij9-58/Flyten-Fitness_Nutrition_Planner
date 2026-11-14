@@ -131,9 +131,9 @@ export default function AuthPage({ initialMode = 'signin', onDone, onSkip }) {
         <VelocityCurve className="velocity-mask pointer-events-none absolute left-0 right-0
                                   bottom-0 h-[170px] w-full opacity-40" />
         <button onClick={onSkip} className="relative flex items-center gap-2.5 self-start group"
-          aria-label="OptiFit home">
+          aria-label="Flyten home">
           <Mark className="w-7 h-7 text-[#F6F5F2] transition-transform group-hover:scale-105" />
-          <span className="text-[17px] font-extrabold tracking-[-0.02em]">OptiFit</span>
+          <span className="text-[17px] font-extrabold tracking-[-0.02em]">Flyten</span>
         </button>
 
         <div className="relative hidden md:block max-w-[420px] py-14">

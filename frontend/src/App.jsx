@@ -1229,10 +1229,10 @@ export default function App() {
 
         <div className="max-w-[1060px] mx-auto px-5 md:px-8 relative">
           <div className="flex items-center gap-2.5 pt-7">
-            <button onClick={goHome} aria-label="OptiFit home"
+            <button onClick={goHome} aria-label="Flyten home"
               className="flex items-center gap-2.5 group">
               <Mark className="w-7 h-7 text-[#F6F5F2] transition-transform group-hover:scale-105" />
-              <span className="text-[17px] font-extrabold tracking-[-0.02em]">OptiFit</span>
+              <span className="text-[17px] font-extrabold tracking-[-0.02em]">Flyten</span>
             </button>
             <div className="no-print ml-auto flex items-center gap-4">
               {showPlan && (
@@ -1668,7 +1668,7 @@ export default function App() {
         <footer className="border-t border-[#E3E1DA] py-10">
           <div className="flex items-center gap-2.5 mb-5">
             <Mark className="w-5 h-5 text-[#141815]" />
-            <span className="text-[13px] font-extrabold">OptiFit</span>
+            <span className="text-[13px] font-extrabold">Flyten</span>
           </div>
           <p className="text-[13px] text-[#454B47] font-semibold leading-relaxed max-w-[680px]">
             Built by a sprinter who thinks fitness is the one currency you cannot borrow.

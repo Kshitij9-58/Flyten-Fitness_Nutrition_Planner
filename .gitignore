@@ -1,7 +1,7 @@
 # Python / Backend
 backend/venv/
 backend/__pycache__/
-backend/optifit.db
+backend/flyten.db
 
 # Node / Frontend
 frontend/node_modules/
