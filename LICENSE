@@ -1,0 +1,58 @@
+Copyright (c) 2026 Kshitij. All rights reserved.
+
+
+WHY THIS CODE IS PUBLIC
+
+Flyten is published so that it can be read. The point of putting it here is
+that someone can open any file and see how the thing was actually built: the
+reasoning in the comments, the decisions that were reversed, and the parts
+that were measured before they were kept. Prospective employers, collaborators
+and anyone curious are welcome to read all of it.
+
+Public is not the same as free to take. The terms below say where that line
+sits.
+
+
+YOU MAY
+
+  - Read, study and reference any part of this repository.
+  - Clone it and run it locally to evaluate it.
+  - Quote short excerpts with attribution, for example in a review, article,
+    or discussion of the work.
+
+
+YOU MAY NOT, WITHOUT WRITTEN PERMISSION
+
+  - Copy, republish or redistribute this code or substantial parts of it.
+  - Use it, in whole or in part, in any product or service, commercial or
+    otherwise.
+  - Distribute derivative works based on it.
+  - Present it, or work derived from it, as your own.
+
+All rights not expressly granted above are reserved. Permission is reachable:
+open an issue and ask.
+
+
+NO WARRANTY
+
+This software is provided "as is", without warranty of any kind, express or
+implied, including but not limited to the warranties of merchantability,
+fitness for a particular purpose and non-infringement. In no event shall the
+copyright holder be liable for any claim, damages or other liability, whether
+in an action of contract, tort or otherwise, arising from, out of or in
+connection with the software or its use.
+
+
+NOT MEDICAL ADVICE
+
+Flyten estimates calorie and macronutrient targets from population-level
+equations, principally Mifflin-St Jeor. Those equations describe an average,
+and an individual's real energy expenditure can sit ten to fifteen percent
+either side of the number this software returns. The training plans are
+templates matched to a goal, not individual programming.
+
+Nothing this software produces is medical or dietary advice, and nothing in it
+is a substitute for a consultation. Anyone making a significant change to how
+they eat or train should talk to a doctor or a registered dietitian first,
+and especially so if they are managing a health condition, recovering from an
+injury, pregnant, or under eighteen.
